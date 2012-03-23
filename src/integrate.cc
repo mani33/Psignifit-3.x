@@ -242,7 +242,7 @@ PsiIndependentPosterior independent_marginals (
 	std::vector<double> prm ( MAP );
 	delete opt;
 	for ( i=0; i<nprm; i++ ) {
-		std::cerr << "================= prm " << i << "================\n";
+		// std::cerr << "================= prm " << i << "================\n";
 		// Determine parameter ranges using the same routine as for starting values
 		parameter_range ( data, pmf, i, &minm, &maxm );
 		Z = 0;
