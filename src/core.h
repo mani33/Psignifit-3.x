@@ -381,7 +381,7 @@ class polyCore : public PsiCore
 		double g (
 			double x,                                ///< stimulus intensity
 			const std::vector<double>& prm           ///< parameter vector (alpha,beta, ...)
-			) const { return pow( x/prm[0], prm[1] ); }    ///< evaluate the polyCore
+			) const { return (x>0 ? pow( x/prm[0], prm[1] ) : 0 ); }    ///< evaluate the polyCore
 		double dg (
 			double x,                                ///< stimulus intensity
 			const std::vector<double>& prm,          ///< parameter vector
