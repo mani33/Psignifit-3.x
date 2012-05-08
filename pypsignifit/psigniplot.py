@@ -260,7 +260,7 @@ def plotppScatter ( simdata, observed, quantity, shortname=None, ax=None ):
     ax.set_xlim ( axmin, axmax )
     ax.set_ylim ( axmin, axmax )
 
-    ax.set_xlabel ( "observed "+quantity, **(rc.label+rc.alltext) )
+    ax.set_ylabel ( "observed "+quantity, **(rc.label+rc.alltext) )
     ax.set_xlabel ( "predicted "+quantity, **(rc.label+rc.alltext) )
 
     # Write diagnostics
