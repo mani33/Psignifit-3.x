@@ -9,6 +9,47 @@
 #
 ######################################################################
 
+""" Psychometric analysis of psychophysics data in Python.
+
+Full documentation available at: http://psignifit.sourceforge.net/
+
+
+Getting Help
+------------
+
+All main classes are documented using docstrings. In ipython you can acces them
+using the '?' operator:
+>>> import pypsignifit as psi
+>>> psi.BayesInference?
+[...]
+>>> psi.BootstrapInference?
+[...]
+
+Inference Classes
+-----------------
+
+* ASIRInference
+* BayesInference
+* BootstrapInference
+
+Diagnostic Classes
+------------------
+
+* ConvergenceMCMC
+* GoodnessOfFit
+* ParameterPlot
+* ThresholdPlot
+
+Subpackages
+-----------
+
+* psignidata
+* psignierrors
+* psigniplot
+* psignipriors
+
+"""
+
 __docformat__ = "restructuredtext"
 
 import sys
