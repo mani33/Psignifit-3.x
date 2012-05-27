@@ -1,4 +1,4 @@
-psignifit (3.0~beta.20120503.1-1) unstable; urgency=low
+psignifit3 (3.0~beta.20120503.1-1) unstable; urgency=low
 
   * Bumped standards version from 3.9.2 to 3.9.3, no changes required
   * Bumped the copyright year.
@@ -7,9 +7,12 @@ psignifit (3.0~beta.20120503.1-1) unstable; urgency=low
   * Inject debian version number into python module
   * Fix unversioned copyright format uri
   * This is a combined bugfix and feature release from upstream
+  * Rename source package to psignifit3. This is what it was called in the ITP
+    and it allows us to maintain the 'old' psignifit source and binary
+    package.
   * Initial release (Closes: #580499)
 
- -- Nikolaus Valentin Hänel <valentin.haenel@gmx.de>  Wed, 09 May 2012 19:34:42 +0200
+ -- Nikolaus Valentin Hänel <valentin.haenel@gmx.de>  Sun, 27 May 2012 17:48:14 +0200
 
 psignifit (3.0~beta.20111109.1-1) neurodebian; urgency=low
 
