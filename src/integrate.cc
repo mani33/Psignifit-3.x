@@ -280,11 +280,12 @@ PsiIndependentPosterior independent_marginals (
 
 			// And compute average Z online
 			if (p>-1e10 && p<1e10) {
-				Z += ( margin[i][j] );
+				Z += exp( -margin[i][j] );
 				count ++;
 			}
 		}
 		Z /= count;
+		Z = log ( Z );
 
 		// Include Z for numerical stability
 		for ( j=0; j<gridsize; j++ ) {
