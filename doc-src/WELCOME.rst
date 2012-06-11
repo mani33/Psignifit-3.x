@@ -98,7 +98,7 @@ We are very grateful to the following people, who have contributed to Psignifit3
 How to install
 **************
 
-The following section detail the installation instructions for the Python
+The following sections detail the installation instructions for the Python
 version of **Psignifit (python-psignifit)** and the **Command Line Interface
 (cli)**:
 
