@@ -1,3 +1,14 @@
+2012-06-11 - Psignifit-3.x - release/3.0_beta.20120611.1
+
+* upgraded to Windows py2.7 support: psignifit now works with recent versions
+  of EPD.
+* fixed a bug in ASIRInference that was observed if the prenormalization was
+  insufficient for a particular dataset.
+* disable HybridMCMC (was never used anyway).
+* updated documentation
+* fixed a bug in polyCore: polycore now returns 0 for negative values.
+* some cosmetic changes in plotting routines
+
 2012-05-03 - Psignifit-3.x - release/3.0_beta.20120503.1
 
 * minor bugfix release
