@@ -63,6 +63,7 @@ To get access to all plot functions in isolation, they can also be imported sepa
 .. autofunction:: drawaxes
 .. autofunction:: plotRd
 .. autofunction:: plotHistogram
+.. autofunction:: plotppScatter
 .. autofunction:: plotPMF
 .. autofunction:: plotThres
 .. autofunction:: plotGeweke

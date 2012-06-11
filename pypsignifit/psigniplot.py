@@ -1047,7 +1047,7 @@ def plotMultiplePMFs ( *InferenceObjects, **kwargs ):
     drawaxes ( ax, xtics, "%g", ytics, "%g", kwargs.setdefault("xlabel", "stimulus intensity"), ylabel_text )
 
     # Draw legend
-    p.legend (pmflines,pmflabels)
+    ax.legend (pmflines,pmflabels,'lower right')
 
     return pmflines,pmfdata
 
