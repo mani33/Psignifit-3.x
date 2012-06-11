@@ -4,23 +4,40 @@ Linux (Debian/Ubuntu)
 This section details how to install the Python version and the command line
 version of Psignifit from a source download.
 
-In either case you should proceed in the following order:
+.. note::
 
-* `Obtaining the Sources`_
-* `Installing Dependencies`_
+    Currently (Jun 2012) we provide experimental support for packages via
+    `Neurodebian <http://neuro.debian.net/>`_ for `all current releases of
+    Debian *and* Ubuntu
+    <http://neuro.debian.net/pkgs/python-pypsignifit.html>`_. If you have
+    configured the NeuroDebian repositories correctly, the following command
+    will install Psignifit3 for Python::
 
-And then continue to install the desired version:
+        $ sudo apt-get install python-pypsignifit
 
-* `Installing Psignifit for Python (python-psignifit)`_
+    This option is the easiest route to getting python-psignifit installed.
 
-Or:
+.. note::
 
-* `Installing the Command Line Interface (cli)`_
+    If you wish (or need) to install from source, first look at:
 
-If you need to build the documentation on your local machine, you may want to
-look at:
+    * `Obtaining the Sources`_
+    * `Installing Dependencies`_
 
-* `Building the documentation`_
+    And then continue to install the desired version:
+
+    * `Installing Psignifit for Python (python-psignifit)`_
+
+    Or:
+
+    * `Installing the Command Line Interface (cli)`_
+
+.. note::
+
+    If you need to build the documentation on your local machine, you may want to
+    look at:
+
+    * `Building the documentation`_
 
 Obtaining the Sources
 ---------------------
