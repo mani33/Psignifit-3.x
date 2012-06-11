@@ -521,7 +521,7 @@ int BootstrapTest ( TestSuite * T ) {
 	// Check against psignifit results
 	// These values are subject to statistical variation. "equality" is defined relatively coarse
 	failures += T->isless(boots.getAcc_t(0),     0.018662,"Acceleration constant (threshold)");
-	failures += T->isequal(boots.getBias_t(0), -0.0928786,"Bias (threshold)",            .01);
+	failures += T->isequal(boots.getBias_t(0), -0.0928786,"Bias (threshold)",            .05);
 	failures += T->isequal(boots.getThres(.1,0), 2.65266,"th(.1)",                        .05);
 	failures += T->isequal(boots.getThres(.9,0), 3.89757,"th(.9)",                        .05);
 
