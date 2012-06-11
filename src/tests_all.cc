@@ -591,6 +591,7 @@ int MCMCTest ( TestSuite * T ) {
 	GenericMetropolis * gmS = new GenericMetropolis ( pmf, data, new GaussRandom() );
 	gmS->setTheta ( prm );
 
+	/* // We don't use HybridMCMC anywhere
 	HybridMCMC * S = new HybridMCMC ( pmf, data, 20 );
 	S->setTheta ( prm );
 	// This gives rather bad sampling but at least it gives something
@@ -601,6 +602,7 @@ int MCMCTest ( TestSuite * T ) {
 
 	srand48(0);
 	MCMCList post ( S->sample(1000) );
+	*/
 	srand48(0);
 	MCMCList mhpost ( mhS->sample(1000) );
 	srand48(0);
@@ -618,9 +620,11 @@ int MCMCTest ( TestSuite * T ) {
 	}
 	*/
 
+	/*
 	failures += T->isequal ( post.getMean(0), 3.58027, "Hybrid MCMC alpha", .3 );
 	failures += T->isequal ( post.getMean(1), 0.909616, "Hybrid MCMC beta", .2 );
 	failures += T->isequal ( post.getMean(2), 0.0217217, "Hybrid MCMC lambda", .02 );
+	*/
 	failures += T->isequal ( mhpost.getMean(0), 3.22372, "Metropolis Hastings alpha", .2 );
 	failures += T->isequal ( mhpost.getMean(1), 1.12734, "Metropolis Hastings beta", .2 );
 	failures += T->isequal ( mhpost.getMean(2), 0.0199668, "Metropolis Hastings lambda", .02 );
@@ -633,7 +637,7 @@ int MCMCTest ( TestSuite * T ) {
 	delete prior;
 	delete pmf;
 	delete mhS;
-	delete S;
+	// delete S;
 	delete data;
 
 	return failures;
