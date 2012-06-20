@@ -4,6 +4,7 @@
 export DH_OPTIONS
 
 # set the MPLCONFIGDIR to avoid writing into non writable location
+export HOME=$(CURDIR)/build
 export MPLCONFIGDIR=$(CURDIR)/build
 
 %:
