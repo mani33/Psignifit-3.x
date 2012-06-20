@@ -2182,7 +2182,7 @@ class ASIRInference ( PsiInference ):
     def mcslope ():
         "slopes of all posterior samples"
         def fget ( self ):
-            self.mcslope = getattr ( self, "__mcslope", None )
+            self.__mcslope = getattr ( self, "__mcslope", None )
             if self.__mcslope == None:
                 self.__mcslope = N.array ( [ [self._pmf.getSlope ( self.mcestimates[k,:], th ) for th in self.mcthres[k,:] ] for k in xrange ( self.Nsamples ) ] )
             return self.__mcslope

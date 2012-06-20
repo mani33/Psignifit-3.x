@@ -11,56 +11,104 @@ the ideas that are implemented here can be found in the paper by [Kuss_et_al_200
 
 Getting started
 ===============
-To get you started with pypsignifit, open a Python interpreter and type the following:
+To get you started with pypsignifit, open a Python interpreter and type the following::
 
->>> import pypsignifit as psi
->>> dir(psi)
-['ASIRInference',
- 'BayesInference',
- 'BootstrapInference',
- 'ConvergenceMCMC',
- 'GoodnessOfFit',
- 'ParameterPlot',
- 'ThresholdPlot',
- '__builtins__',
- '__doc__',
- '__docformat__',
- '__file__',
- '__name__',
- '__package__',
- '__path__',
- '__test__',
- '__version__',
- 'dump_info',
- 'interface',
- 'plotInfluential',
- 'plotMultiplePMFs',
- 'plotSensitivity',
- 'psignidata',
- 'psignierrors',
- 'psigniplot',
- 'psignipriors',
- 'pygibbsit',
- 'set_seed',
- 'show',
- 'subprocess',
- 'sys',
- 'version']
+    >>> import pypsignifit as psi
+    >>> print psi.__doc__
+    Psychometric analysis of psychophysics data in Python.
+
+    Full documentation available at: http://psignifit.sourceforge.net/
+
+
+    Getting Help
+    ------------
+
+    All main classes are documented using docstrings. In ipython you can acces them
+    using the '?' operator:
+    >>> import pypsignifit as psi
+    >>> psi.BayesInference?
+    [...]
+    >>> psi.BootstrapInference?
+    [...]
+
+    Inference Classes
+    -----------------
+
+    * ASIRInference
+    * BayesInference
+    * BootstrapInference
+
+    Diagnostic Classes
+    ------------------
+
+    * ConvergenceMCMC
+    * GoodnessOfFit
+    * ParameterPlot
+    * ThresholdPlot
+
+    Subpackages
+    -----------
+
+    * psignidata
+    * psignierrors
+    * psigniplot
+    * psignipriors
+
+    >>> dir(psi)
+    ['ASIRInference',
+    'BayesInference',
+    'BootstrapInference',
+    'ConvergenceMCMC',
+    'GoodnessOfFit',
+    'ParameterPlot',
+    'ThresholdPlot',
+    '__builtins__',
+    '__doc__',
+    '__docformat__',
+    '__file__',
+    '__name__',
+    '__package__',
+    '__path__',
+    '__test__',
+    '__version__',
+    'dump_info',
+    'interface',
+    'plotInfluential',
+    'plotMultiplePMFs',
+    'plotSensitivity',
+    'psignidata',
+    'psignierrors',
+    'psigniplot',
+    'psignipriors',
+    'pygibbsit',
+    'set_seed',
+    'show',
+    'subprocess',
+    'sys',
+    'version']
 
 With the first command you import the complete functionality of the Python
-module ``pypsignifit`` to your current workspace. ``dir( <module_name> )``
-provides you with a list of functions and data types that come with pypsignifit.
-To get help and documentation about one of these functions, you can use the
-online Python help by typing ``help( <object_name> )``. For instance,
+module ``pypsignifit`` to your current workspace.  Then, ``print psi.__doc__``
+shows you the most important classes and ``dir( <module_name> )`` provides you
+with a full list of functions and data types that come with pypsignifit.  To
+get help and documentation about one of these functions, you can use the online
+Python help by typing ``help( <object_name> )`` or using the ``?`` operator in
+ipython. For instance:
 
 >>> help ( psi.BayesInference )
+[...]
+>>> psi.BayesInference?
+[...]
 
 will show you the documentation of the ``BayesInference`` object.
 
-Hint: if you would like to copy and paste the examples from this website we
-recommend using the `IPython <http://ipython.scipy.org/moin/>`_ interpreter.
-This has a special magic command ``%cpaste`` which ignores prefixing ``>>>``
-from its input.
+
+.. note:
+
+    Hint: if you would like to copy and paste the examples from this website we
+    recommend using the `IPython <http://ipython.scipy.org/moin/>`_ interpreter.
+    This has a special magic command ``%cpaste`` which ignores prefixing ``>>>``
+    from its input.
 
 If you want to obtain the version identifier (for inclusion in support requests
 and bug reports), type:

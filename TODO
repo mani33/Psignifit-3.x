@@ -3,3 +3,9 @@
 * Lion: tests faile with explicite stepwidths
 
 * evtl irgendwann keine matplotlib abhängigkeitn ~> debian/control
+* split tests into "may fail" and "should never fail"
+* installation: Windows ~> windows_setup.py
+* Entought has to work out of the box
+* Doc: Warning about initial grids. We assume that the experimenter is sane
+* optimizer stopping? Do something about that?
+* b(x-a) core

@@ -269,12 +269,6 @@ class TestMCMC(ut.TestCase):
         for i,p in enumerate(priors):
             sampler.set_proposal(i, sfu.get_prior(p))
 
-    def test_hybrid_mcmc(self):
-        data = TestData.generate_test_dataset()
-        psi = TestPsychometric.generate_test_model()
-        sampler = sfr.HybridMCMC(psi, data, 5)
-        self.all_sampler_methods(sampler)
-
     def test_not_enough_samples(self):
         data = TestData.generate_test_dataset()
         psi = TestPsychometric.generate_test_model()

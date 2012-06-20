@@ -325,7 +325,7 @@ dist-prepare-upload: dist-swigged dist-win
 	mkdir ${ARCHIVE_PREFIX}
 	cp ${ZIP_FILE} ${WINDOWS_CLI_INSTALLER} ${ARCHIVE_PREFIX}
 	if [ -d dist ]; then \
-		cp dist/pypsignifit-3.0beta.win32-py2.6.exe ${ARCHIVE_PREFIX}/${WINDOWS_PY_INSTALLER}; \
+		cp dist/pypsignifit-3.0beta.win32-py2.7.exe ${ARCHIVE_PREFIX}/${WINDOWS_PY_INSTALLER}; \
 	else \
 		echo "Installer for Python w32 has not been built; will be omitted in Upload."; \
 	fi
