@@ -1,3 +1,11 @@
+psignifit3 (3.0~beta.20120611.1-1) unstable; urgency=low
+
+  * Remove 'test_precision' patch, fixed upstream
+  * New upstream release
+  * Fix for unwritable home directories
+
+ -- Nikolaus Valentin Hänel <valentin.haenel@gmx.de>  Sun, 27 May 2012 17:48:14 +0200
+
 psignifit3 (3.0~beta.20120503.1-1) unstable; urgency=low
 
   * Bumped standards version from 3.9.2 to 3.9.3, no changes required
