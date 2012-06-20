@@ -3,8 +3,17 @@
 # This has to be exported to make some magic below work.
 export DH_OPTIONS
 
+# set the MPLCONFIGDIR to avoid writing into non writable location
+export MPLCONFIGDIR=$(CURDIR)/build
+
 %:
 	dh $@ --buildsystem=python_distutils
+
+# Assure Agg backend for matplotlib to avoid any possible complication
+override_dh_auto_configure:
+	mkdir -p $(MPLCONFIGDIR)
+	echo "backend : Agg" >| $(MPLCONFIGDIR)/matplotlibrc
+	dh_auto_configure
 
 override_dh_auto_test:
 	${MAKE} test
