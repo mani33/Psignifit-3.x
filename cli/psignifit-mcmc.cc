@@ -46,6 +46,7 @@ int main ( int argc, char ** argv ) {
 	// Set up the most important data
 	bool verbose ( parser.getOptSet ( "-v" ) ), pmfshown ( false ), summary ( parser.getOptSet( "--summary" ) ), generic ( parser.getOptSet ( "-generic" ) );
 	unsigned int i,j, ncuts, nparams, nblocks;
+	size_t string_index;
 	PsiData                    *data;
 	PsiPsychometric            *pmf;
 	PsiOptimizer               *opt;
@@ -81,10 +82,10 @@ int main ( int argc, char ** argv ) {
 		nblocks = 1;
 		pilotfile.getline ( sline, 80 );
 		nparams = 0;
-		i = std::string ( sline ).find('.');
-		while ( i!=std::string::npos ) {
+		string_index = std::string ( sline ).find('.');
+		while ( string_index!=std::string::npos ) {
 			nparams ++;
-			i = std::string ( sline ).find ('.',i+1);
+			string_index = std::string ( sline ).find ('.',string_index+1);
 		}
 		if ( verbose ) std::cerr << "nparams: " << nparams;
 		while ( strcmp(sline,"") ) {
