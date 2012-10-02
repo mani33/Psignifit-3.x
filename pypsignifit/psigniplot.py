@@ -19,7 +19,7 @@ import swignifit.interface_methods as interface
 
 from matplotlib.ticker import MaxNLocator
 
-__all__ = ["GoodnessOfFit","ConvergenceMCMC","ParameterPlot","ThresholdPlot","plotSensitivity","plotInfluential","plotMultiplePMFs"]
+__all__ = ["GoodnessOfFit","ConvergenceMCMC","ParameterPlot","ThresholdPlot","plotSensitivity","plotInfluential","plotMultiplePMFs","plotJoint"]
 __warnred = [.7,0,0]
 
 import warnings
