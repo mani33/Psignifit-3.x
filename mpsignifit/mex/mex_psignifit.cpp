@@ -41,7 +41,7 @@ bool get_gammaislambda ( const mxArray * inp ) {
 	if ( mxGetFieldNumber ( inp, "gammaislambda" ) <0 )
 		mexErrMsgTxt ( "(mex) get_gammaislambda: 'gammaislambda' was not specified!\n" );
 	mxArray * gammaislambda = mxGetField ( inp, 0, "gammaislambda" );
-	if ( mxIsDouble ( gammaislambda ) )
+	if ( mxIsLogical ( gammaislambda ) )
 		return *( (double*)mxGetData ( gammaislambda ) );
 	else
 		mexErrMsgTxt ( "(mex) get_gammaislambda: could not interprete gammaislambda field\n" );
