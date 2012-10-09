@@ -133,6 +133,7 @@ save ( '-ascii', dataf, 'data' );
 if nafc > 1
     prior4 = '';
 elseif gammaislambda
+    gil = '-e';
     prior4 = '';
 else
     prior4 = sprintf ( '-prior4 "%s"', getfield ( priors, 'gamma' ) );
@@ -143,9 +144,9 @@ scuts = sprintf ( '"%s', num2str ( cuts, '%f,') );
 scuts(length(scuts)) = '"';
 
 % Write the command
-cmd = sprintf ( 'psignifit-mapestimate %s --matlab -prior1 "%s" -prior2 "%s" -prior3 "%s" %s -nafc %d -s %s -c %s -cuts %s %s', ...
+cmd = sprintf ( 'psignifit-mapestimate %s --matlab -prior1 "%s" -prior2 "%s" -prior3 "%s" %s -nafc %d -s %s -c %s %s -cuts %s %s', ...
     dataf, getfield(priors,'m_or_a'), getfield(priors,'w_or_b'), getfield(priors,'lambda'), prior4, ...
-    nafc, sigmoid, core, scuts, verbosity);
+    nafc, sigmoid, core, gil, scuts, verbosity);
 
 if verbose
     cmd
