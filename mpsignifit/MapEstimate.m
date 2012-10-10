@@ -154,6 +154,9 @@ end
 
 % Do the real work
 [status,output] = system ( cmd );
+if status
+    disp(output)
+end
 eval ( output );
 
 results.call = 'mapestimate';
