@@ -1,4 +1,4 @@
-function ci = getCI ( inference, cut, p )
+function ci = getCI ( inference, cut, p,varargin )
 % ci = getCI ( inference, cut )
 %
 % Get the confidence interval from the inference object
@@ -11,6 +11,9 @@ function ci = getCI ( inference, cut, p )
 %
 %
 % This file is part of psignifit3 for matlab (c) by Ingo Fründ
+% Modified by MS 2012-10-09
+args.param = 'threshold'; % 'slope' or 'threshold' for which we need the CI
+args = parseVarArgs(args,varargin{:});
 
 notin = 1-p;
 probs = [0.5*notin,1-0.5*notin];
@@ -21,4 +24,10 @@ if strcmp ( inference.call, 'bootstrap' )
     probs = normcdf( bias + ( norminv(probs) + bias ) ./ (1-acc*(norminv(probs) + bias )) );
 end;
 
-ci = prctile ( inference.mcthres(:,cut), 100*probs );
+switch args.param
+    case 'threshold'
+        ci = prctile ( inference.mcthres(:,cut), 100*probs );
+    case 'slope'
+        ci = prctile ( inference.mcslopes(:,cut), 100*probs );
+end
+% ci = prctile ( inference.mcthres(:,cut), 100*probs );
